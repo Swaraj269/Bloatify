@@ -51,6 +51,52 @@ function VideoSlider({ setHstart, hstart }) {
     }
   }, [sliderRef]);
 
+  function handleCardClick(index) {
+    if (isAnimating || !sliderRef.current) return;
+    setIsAnimating(true);
+  
+    const slider = sliderRef.current;
+    const cards = Array.from(slider.querySelectorAll(".card"));
+  
+    if (!cards.length || index >= cards.length) {
+      setIsAnimating(false);
+      return;
+    }
+  
+    const clickedCard = cards[index];
+  
+    // Move clicked card downwards to remove it visually first
+    gsap.to(clickedCard, {
+      y: "+=50%",
+      scale: 1,
+      duration: 0.4,
+      ease: "power3.inOut",
+      onComplete: () => {
+        // Move clicked card to the last position in the DOM
+        slider.appendChild(clickedCard);
+  
+        // Shift all other cards forward to fill the gap
+        const newOrder = [...cards.slice(0, index), ...cards.slice(index + 1), clickedCard];
+  
+        newOrder.forEach((card, i) => {
+          gsap.to(card, {
+            y: `${9 * i}%`,
+            z: 15 * i,
+            scale: 1,
+            duration: 0.5,
+            ease: "power3.out",
+          });
+        });
+  
+        setTimeout(() => {
+          initializeCards();
+          setIsAnimating(false);
+        }, 500);
+      },
+    });
+  }
+  
+
   const handleClick = () => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -172,6 +218,7 @@ function VideoSlider({ setHstart, hstart }) {
           {videos.map((elem, index) => (
             <div
               key={index}
+              onClick={() => handleCardClick(index)}
               className="card absolute overflow-hidden top-[45%] lg:top-[32%] left-[50%] flex flex-col h-[40%] w-[65%] md:h-[40%] md:w-[50%] lg:h-[50%] lg:w-[25%]"
             >
               <div
@@ -179,6 +226,7 @@ function VideoSlider({ setHstart, hstart }) {
                 onClick={(e) => {
                   e.stopPropagation();
                   toggleAudio(index);
+                  handleCardClick(index);
                 }}
               >
                 <ReactPlayer

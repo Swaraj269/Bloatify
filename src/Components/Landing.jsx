@@ -44,20 +44,20 @@ function Landing({ finish }) {
           <span className="inline-block font-[Sbold]">Story to Life.</span>
         </h1>
       </div>
-      <div className="calltoAction mt-[3vh] lg:mt-12 gap-[4vh] lg:gap-[30vw] lg:flex-row flex-col  flex lg:items-center">
+      <div className="calltoAction mt-[3vh] lg:mt-12 gap-[4vh] lg:gap-[30vw] md:flex-row flex-col  flex lg:items-center">
         <div className="subtext">
-          <h1 className=" text-[5vw] md:text-[4vw] lg:text-3xl overflow-hidden leading-[1.15] font-[Sregular]">
+          <h1 className=" text-[5vw] md:text-[2.5vw] lg:text-3xl overflow-hidden leading-[1.15] font-[Sregular]">
             <span className="inline-block font-[Sregular]">
               From Vision to Viral - Elevating Brands
             </span>
           </h1>
-          <h1 className="text-[5vw] md:text-[4vw] lg:text-3xl overflow-hidden leading-[1.15] font-[Sregular]">
+          <h1 className="text-[5vw] md:text-[2.5vw] lg:text-3xl overflow-hidden leading-[1.15] font-[Sregular]">
             <span className="inline-block font-[Sregular]">
               with Cinematic Excellence
             </span>
           </h1>
         </div>
-        <div className="ctabutton w-fit relative overflow-hidden cursor-pointer active:scale-[0.98] bg-black text-[#D42A2A] rounded-full px-7 py-2 ">
+        <div className="ctabutton w-fit relative overflow-hidden flex items-center justify-center cursor-pointer active:scale-[0.98] bg-black text-[#D42A2A] rounded-4xl px-7 py-2 ">
           <div className="afterdiv h-[2vw] pointer-events-none  scale-[0] w-[2vw] bg-white absolute top-0 left-0 rounded-full "></div>
           <h1 className="ctatext md:text-[2vw]  text-[3.5vw] lg:text-lg relative z-[5] font-[Smedium]">
             Book A Call
