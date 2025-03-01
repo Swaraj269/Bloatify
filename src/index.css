@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Slight";
+  src: url("../src/assets/Fonts/Satoshi-Light.woff2");
+}
+@font-face {
+  font-family: "Sregular";
+  src: url("../src/assets/Fonts/Satoshi-Regular.woff2");
+}
+@font-face {
+  font-family: "Smedium";
+  src: url("../src/assets/Fonts/Satoshi-Medium.woff2");
+}
+@font-face {
+  font-family: "Sbold";
+  src: url("../src/assets/Fonts/Satoshi-Bold.woff2");
+}
+@font-face {
+  font-family: "Sblack";
+  src: url("../src/assets/Fonts/Satoshi-Black.woff2");
+}
+
+.bottomwindow,
+.topwindow {
+  transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.ctatext,
+.afterdiv {
+  transition: all 0.5s ease-out;
+}
+.ctabutton:hover .ctatext {
+  color: black;
+}
+
+.ctabutton:hover .afterdiv {
+  scale: 20;
+}
+
+.slider .card {
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.copy {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.video-player video  {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.minimap::-webkit-scrollbar {
+  display: none;
+}
