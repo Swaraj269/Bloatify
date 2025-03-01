@@ -11,7 +11,7 @@ function Home({ hstart, setHstart }) {
   const [loaderHandler, setLoaderHandler] = useState(0);
 
   return (
-    <div >
+    <div>
       <Loader setFinish={setLoaderHandler} />
       <Navbar hstart={hstart} />
       <Landing finish={loaderHandler} />

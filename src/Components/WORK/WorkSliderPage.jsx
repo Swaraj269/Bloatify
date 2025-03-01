@@ -17,7 +17,20 @@ import ReactPlayer from "react-player";
 import { Play, Pause } from "lucide-react";
 
 function WorkSliderPage({ hstart, setHstart }) {
-  const videos = [Video1, Video2, Video3, Video4, Video5, Video6, Video7, Video8, Video9, Video10, Video11, Video12];
+  const videos = [
+    Video1,
+    Video2,
+    Video3,
+    Video4,
+    Video5,
+    Video6,
+    Video7,
+    Video8,
+    Video9,
+    Video10,
+    Video11,
+    Video12,
+  ];
   const [currentVideo, setCurrentVideo] = useState(Video1);
   const [playing, setPlaying] = useState(true);
   const [muted, setMuted] = useState(false);
