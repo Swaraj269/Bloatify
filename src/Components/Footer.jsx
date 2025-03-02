@@ -151,7 +151,7 @@ function Footer({ setHstart, hstart }) {
               </div>
             </div>
           </div>
-          <div className="sometext pt-[5vh] lg:pt-10 w-full sm:w-[80%] md:w-[70%] lg:w-[50%] ">
+          <div className="sometext pt-[5vh] lg:pt-10 w-full sm:w-[80%] md:w-[70%] lg:w-[65%] ">
             <h1 className=" text-[10vw] sm:text-[8vw] md:text-[7vw] lg:text-[6.2vw] font-[Sregular] leading-[1.2] lg:leading-[1]">
               Lights, Camera, Brand Success!
             </h1>

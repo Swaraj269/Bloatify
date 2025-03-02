@@ -45,7 +45,7 @@
 .copy {
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
-.video-player video  {
+.video-player video {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -53,4 +53,9 @@
 
 .minimap::-webkit-scrollbar {
   display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #d42a2a !important;
 }

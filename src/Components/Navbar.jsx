@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar({ hstart }) {
   return (
@@ -20,33 +20,45 @@ function Navbar({ hstart }) {
       </div>
       <div className="navlinks">
         <div
-          className={`navlinkCapsule flex items-center justify-center gap-5 lg:gap-10 ${
+          className={`navlinkCapsule flex items-center justify-center gap-1 lg:gap-2 ${
             hstart ? "bg-white" : "bg-black"
-          }  rounded-full px-5 md:py-2 md:px-8  lg:px-10 py-1 lg:py-2 `}
+          }  rounded-full px-2 md:py-2 md:px-4  lg:px-5 py-1 lg:py-2 `}
         >
           <div className="navlink cursor-pointer active:scale-[0.96] ">
-            <Link
+            <NavLink
+              style={(e) => {
+                return {
+                  color: e.isActive ? "#000" : "",
+                  backgroundColor: e.isActive ? "#fff" : "",
+                };
+              }}
               to="/work"
               className={` ${
                 hstart
                   ? "text-black font-[Smedium]"
                   : "text-[#D42A2A] font-[Sbold]"
-              } text-sm md:text-md lg:text-lg `}
+              } text-sm md:text-md hover:bg-white active:scale-[0.98] hover:text-black duration-[0.3s] h-full w-[50%] rounded-full px-2 md:py-2 md:px-4  lg:px-5 py-1 lg:py-2 lg:text-lg `}
             >
               Work
-            </Link>
+            </NavLink>
           </div>
           <div className="navlink cursor-pointer active:scale-[0.96] ">
-            <Link
+            <NavLink
+              style={(e) => {
+                return {
+                  color: e.isActive ? "#000" : "",
+                  backgroundColor: e.isActive ? "#fff" : "",
+                };
+              }}
               to="/service"
               className={` ${
                 hstart
                   ? "text-black font-[Smedium]"
                   : "text-[#D42A2A] font-[Sbold]"
-              } text-sm md:text-md lg:text-lg `}
+              } text-sm md:text-md hover:bg-white active:scale-[0.98] hover:text-black duration-[0.3s] h-full w-[50%] rounded-full px-2 md:py-2 md:px-4  lg:px-5 py-1 lg:py-2 lg:text-lg  `}
             >
               Services
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
