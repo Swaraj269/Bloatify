@@ -55,7 +55,7 @@ function VideoSlider({ setHstart, hstart }) {
   };
 
   return (
-    <div className="workpage h-[50vh] md:h-[90vh] lg:h-[140vh] w-full flex items-start justify-center bg-[#D42A2A]">
+    <div className="workpage h-[80vh] md:h-[90vh] lg:h-[140vh] w-full flex items-start justify-center bg-[#D42A2A]">
       <div className="Container relative overflow-hidden bg-black origin-top h-full w-full scale-[0.65]">
         <div className="textdiv pl-[4.6vw] flex flex-col justify-center items-center sticky h-[20%] lg:h-[60%] text-center left-[50%] top-[10%] lg:top-[10%] translate-x-[-50%] translate-y-[-50%] w-[55%]">
           <div className="heading">
@@ -83,7 +83,7 @@ function VideoSlider({ setHstart, hstart }) {
             </h1>
           </div>
         </div>
-        <div className="h-full w-full absolute left-[50%] translate-x-[-50%] md:top-[70%] top-[75%] translate-y-[-50%] mx-auto p-4">
+        <div className="h-full w-[150vw] sm:w-full absolute left-[50%] translate-x-[-50%] md:top-[70%] top-[75%] translate-y-[-50%] mx-auto p-4">
           <Swiper
             effect="coverflow"
             grabCursor={true}

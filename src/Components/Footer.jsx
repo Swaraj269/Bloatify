@@ -94,7 +94,7 @@ function Footer({ setHstart, hstart }) {
             </div>
             <div className="rightsidetext w-fit">
               <div className="ctabutton relative overflow-hidden cursor-pointer active:scale-[0.98] bg-black text-[#D42A2A] rounded-full px-7 py-2 ">
-                <div className="afterdiv h-[2vw] pointer-events-none  scale-[0] w-[2vw] bg-white absolute top-0 left-0 rounded-full "></div>
+                <div className="afterdiv h-[5vw] pointer-events-none  scale-[0] w-[5vw] bg-white absolute top-0 left-0 rounded-full "></div>
                 <h1 className="ctatext text-[3.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-lg relative z-[5] font-[Smedium]">
                   Book A Call
                 </h1>
