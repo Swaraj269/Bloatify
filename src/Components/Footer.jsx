@@ -28,7 +28,7 @@ function Footer({ setHstart, hstart }) {
       <div className="calldiv flex items-center h-[30%]  lg:h-[45%] w-full">
         <div className="callcontentdiv">
           <div className="heading ">
-            <h1 className=" text-[10vw] sm:text-[8vw] md:text-[7vw]  lg:text-9xl overflow-hidden leading-[1.3] lg:leading-[1.3] font-[Sbold] ">
+            <h1 className=" text-[10vw] sm:text-[8vw] md:text-[7vw]  lg:text-[8vw] overflow-hidden leading-[1.3] lg:leading-[1.3] font-[Sbold] ">
               <motion.span
                 initial={{ y: "100%" }}
                 whileInView={{ y: "0%" }}
@@ -43,7 +43,7 @@ function Footer({ setHstart, hstart }) {
                 Ready to Bring Your
               </motion.span>
             </h1>
-            <h1 className="text-[10vw] sm:text-[8vw] md:text-[7vw]  lg:text-9xl overflow-hidden leading-[1.1] font-[Sbold] ">
+            <h1 className="text-[10vw] sm:text-[8vw] md:text-[7vw]  lg:text-[8vw] overflow-hidden leading-[1.1] font-[Sbold] ">
               <motion.span
                 initial={{ y: "100%" }}
                 whileInView={{ y: "0%" }}
@@ -104,7 +104,7 @@ function Footer({ setHstart, hstart }) {
         </div>
       </div>
       <div className="footercontent h-[70%] lg:h-[55%] w-full ">
-        <div className="upperpart flex justify-center lg:justify-start flex-col lg:flex-row lg:gap-40 h-[70%] lg:h-[50%] ">
+        <div className="upperpart flex justify-center lg:justify-start flex-col lg:flex-row lg:gap-[9vw] h-[70%] lg:h-[50%] ">
           <div className="contactdiv pt-0 lg:pt-15">
             <h1 className="text-[6vw] sm:text-[4.5vw] md:text-[4vw] lg:text-3xl text-black font-[Smedium] ">
               Contact
@@ -151,9 +151,9 @@ function Footer({ setHstart, hstart }) {
               </div>
             </div>
           </div>
-          <div className="sometext pt-[5vh] lg:pt-10 w-full sm:w-[80%] md:w-[70%] lg:w-[65%] ">
-            <h1 className=" text-[10vw] sm:text-[8vw] md:text-[7vw] lg:text-[6.2vw] font-[Sregular] leading-[1.2] lg:leading-[1]">
-              Lights, Camera, Brand Success!
+          <div className="sometext flex pt-[5vh] lg:pt-12 w-full  sm:w-[80%] md:w-[70%] lg:w-[100%] ">
+            <h1 className=" text-[10vw] text-pretty sm:text-[8vw] md:text-[7vw] lg:text-[5.5vw] font-[Sregular] leading-[1.2] lg:leading-[1]">
+              Lights, Camera, <br /> Brand Success!
             </h1>
           </div>
         </div>

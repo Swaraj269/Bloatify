@@ -120,9 +120,9 @@ function VideoSlider({ setHstart, hstart }) {
                   />
                   <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
                     {playingIndex === index ? (
-                      <Pause size={50} className="text-white opacity-90" />
+                      <Pause size={60} className="text-white opacity-90" />
                     ) : (
-                      <Play size={50} className="text-white opacity-90" />
+                      <Play size={60} className="text-white opacity-90" />
                     )}
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import React from "react";
 import ServiceImage from "../assets/Images/ServiceImage.png";
 function Service() {
   return (
-    <div className=" h-[140vh] lg:h-[200vh] flex px-[3vw] lg:px-[5vw] w-full text-white bg-[#010101]">
+    <div className=" h-[140vh] lg:h-[200vh]  flex px-[3vw] lg:px-[5vw] w-full text-white bg-[#010101]">
       <div className="leftpart pt-5 h-full w-full md:w-[60%] ">
         <div className="pagename ">
           <h1 className=" text-[10vw] md:text-[5vw] lg:text-6xl overflow-hidden leading-[1.2] lg:leading-[1] font-[Smedium] ">
@@ -21,9 +21,9 @@ function Service() {
         </div>
         <div className="services mt-[7vh] lg:mt-32 ">
           <div className="service  ">
-            <div className="whatname flex gap-3 lg:gap-5 ">
+            <div className="whatname flex items-center gap-3 lg:gap-5 ">
               <div className="number">
-                <h1 className=" text-[5vw]  md:text-[3vw] lg:text-4xl overflow-hidden leading-[1] font-[Sregular] ">
+                <h1 className=" text-[5vw]  md:text-[3vw] lg:text-[2.5vw] overflow-hidden leading-[1] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -40,7 +40,7 @@ function Service() {
                 </h1>
               </div>
               <div className="content">
-                <h1 className=" text-[5vw] md:text-[3vw] lg:text-4xl overflow-hidden leading-[1] font-[Sregular] ">
+                <h1 className=" text-[5vw] md:text-[3vw] lg:text-[2.5vw] overflow-hidden leading-[1] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -58,7 +58,7 @@ function Service() {
               </div>
             </div>
             <div className="description">
-              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-lg text-pretty ml-8 lg:ml-10 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
+              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-[1.15vw] text-pretty ml-8 lg:ml-10 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
                 <motion.span
                   initial={{ y: "100%" }}
                   whileInView={{ y: "0%" }}
@@ -79,7 +79,7 @@ function Service() {
           <div className="service mt-[5vh] lg:mt-24  ">
             <div className="whatname flex gap-3 lg:gap-5 ">
               <div className="number">
-                <h1 className=" text-[5vw] md:text-[3vw] lg:text-4xl overflow-hidden leading-[1] font-[Sregular] ">
+                <h1 className=" text-[5vw] md:text-[3vw] lg:text-[2.5vw] overflow-hidden leading-[1] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -96,7 +96,7 @@ function Service() {
                 </h1>
               </div>
               <div className="content">
-                <h1 className="text-[5vw] md:text-[3vw] lg:text-4xl overflow-hidden leading-[1.2] font-[Sregular] ">
+                <h1 className="text-[5vw] md:text-[3vw] lg:text-[2.5vw] overflow-hidden leading-[1.2] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -114,7 +114,7 @@ function Service() {
               </div>
             </div>
             <div className="description">
-              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-lg text-pretty ml-8 lg:ml-12 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
+              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-[1.15vw] text-pretty ml-8 lg:ml-12 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
                 <motion.span
                   initial={{ y: "100%" }}
                   whileInView={{ y: "0%" }}
@@ -134,7 +134,7 @@ function Service() {
           <div className="service mt-[5vh] lg:mt-24 ">
             <div className="whatname flex gap-3 lg:gap-5 ">
               <div className="number">
-                <h1 className="text-[5vw] md:text-[3vw] lg:text-4xl  overflow-hidden leading-[1] font-[Sregular] ">
+                <h1 className="text-[5vw] md:text-[3vw] lg:text-[2.5vw]  overflow-hidden leading-[1] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -151,7 +151,7 @@ function Service() {
                 </h1>
               </div>
               <div className="content">
-                <h1 className="text-[5vw] md:text-[3vw] lg:text-4xl  overflow-hidden leading-[1.2] font-[Sregular] ">
+                <h1 className="text-[5vw] md:text-[3vw] lg:text-[2.5vw]  overflow-hidden leading-[1.2] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -169,7 +169,7 @@ function Service() {
               </div>
             </div>
             <div className="description">
-              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-lg text-pretty ml-8 lg:ml-12 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
+              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-[1.15vw] text-pretty ml-8 lg:ml-12 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
                 <motion.span
                   initial={{ y: "100%" }}
                   whileInView={{ y: "0%" }}
@@ -189,7 +189,7 @@ function Service() {
           <div className="service mt-[5vh] lg:mt-24  ">
             <div className="whatname flex gap-3 lg:gap-5 ">
               <div className="number">
-                <h1 className="text-[5vw] md:text-[3vw] lg:text-4xl  overflow-hidden leading-[1] font-[Sregular] ">
+                <h1 className="text-[5vw] md:text-[3vw] lg:text-[2.5vw]  overflow-hidden leading-[1] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -206,7 +206,7 @@ function Service() {
                 </h1>
               </div>
               <div className="content">
-                <h1 className="text-[5vw] md:text-[3vw] lg:text-4xl overflow-hidden leading-[1.2] font-[Sregular] ">
+                <h1 className="text-[5vw] md:text-[3vw] lg:text-[2.5vw] overflow-hidden leading-[1.2] font-[Sregular] ">
                   <motion.span
                     initial={{ y: "100%" }}
                     whileInView={{ y: "0%" }}
@@ -224,7 +224,7 @@ function Service() {
               </div>
             </div>
             <div className="description">
-              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-lg  text-pretty ml-8 lg:ml-12 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
+              <h1 className="text-[3.5vw] md:text-[2vw] lg:text-[1.15vw]  text-pretty ml-8 lg:ml-12 mt-6 w-[80%] lg:w-[60%] overflow-hidden leading-[1.45] font-[Slight] ">
                 <motion.span
                   initial={{ y: "100%" }}
                   whileInView={{ y: "0%" }}

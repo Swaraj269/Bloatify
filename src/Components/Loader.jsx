@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useEffect, useState } from "react";
-function Loader({setFinish}) {
+function Loader({ setFinish }) {
   useEffect(() => {
     const loadingInterval = setInterval(() => {
       setLoadingPercent((prev) => {
@@ -11,14 +11,14 @@ function Loader({setFinish}) {
         }
         return prev + 1;
       });
-    }, 300);
+    }, 1000);
   });
   const [loadingPercent, setLoadingPercent] = useState(0);
   useGSAP(() => {
     gsap.to(".loadingbar", {
-      duration: 1.5,
+      duration: 4,
       translateX: "0%",
-      ease: "cubic-bezier(0.87, 0, 0.13, 1)",
+      ease: "expoInOut",
     });
     gsap.set(".topwindow,.bottomwindow", {
       clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
@@ -44,9 +44,9 @@ function Loader({setFinish}) {
         ".topwindow",
         {
           clipPath: "polygon(0 0, 100% 0%, 100% 0, 0 0)",
-          onComplete: function(){
-            setFinish((prev)=> prev+1);
-          }
+          onComplete: function () {
+            setFinish((prev) => prev + 1);
+          },
         },
         "a"
       );
