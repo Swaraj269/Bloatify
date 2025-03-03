@@ -33,9 +33,9 @@ function Landing({ finish }) {
   }, [finish]);
 
   return (
-    <div className=" h-[64vh] md:h-[66vh] lg:h-[85vh] pt-[12vh] lg:pt-28 px-[4.6vw] text-black w-full bg-[#D42A2A]">
+    <div className=" h-[64vh] md:h-[74vh] lg:h-[85vh] pt-[12vh] lg:pt-28 px-[4.6vw] text-black w-full bg-[#D42A2A]">
       <div className="heading">
-        <h1 className=" text-[12vw] md:text-[8.5vw] lg:text-[8.7vw] overflow-hidden leading-[1.2]  lg:leading-[1.1] pb-3  ">
+        <h1 className=" text-[12vw]  md:text-[8.5vw] lg:text-[8.7vw] overflow-hidden leading-[1.2]  lg:leading-[1.1] pb-3  ">
           <span className="inline-block font-[Sbold]">
             Bringing Your Brand's
           </span>
@@ -44,7 +44,7 @@ function Landing({ finish }) {
           <span className="inline-block font-[Sbold]">Story to Life.</span>
         </h1>
       </div>
-      <div className="calltoAction mt-[3vh] lg:mt-12 gap-[4vh] lg:gap-[30vw] md:flex-row flex-col  flex lg:items-center">
+      <div className="calltoAction mt-[3vh] lg:mt-12 gap-[4vh] md:gap-[20vw] lg:gap-[30vw] md:flex-row flex-col  flex lg:items-center">
         <div className="subtext">
           <h1 className=" text-[5vw] md:text-[2.5vw] lg:text-3xl overflow-hidden leading-[1.15] font-[Sregular]">
             <span className="inline-block font-[Sregular]">
@@ -57,7 +57,7 @@ function Landing({ finish }) {
             </span>
           </h1>
         </div>
-        <div className="ctabutton w-fit relative overflow-hidden flex items-center justify-center cursor-pointer active:scale-[0.98] bg-black text-[#D42A2A] rounded-4xl px-7 py-2 ">
+        <div className="ctabutton w-fit relative overflow-hidden flex items-center justify-center cursor-pointer active:scale-[0.98] bg-black text-[#D42A2A] rounded-4xl  px-7 py-2 ">
           <div className="afterdiv h-[5vw] pointer-events-none  scale-[0] w-[5vw] bg-white absolute top-0 left-0 rounded-full "></div>
           <h1 className="ctatext md:text-[2vw]  text-[3.5vw] lg:text-lg relative z-[5] font-[Smedium]">
             Book A Call

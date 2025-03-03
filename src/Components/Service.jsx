@@ -244,7 +244,7 @@ function Service() {
           </div>
         </div>
       </div>
-      <div className=" hidden md:flex  rightpart relative  h-full md:w-[40%]  ">
+      <div className=" hidden lg:flex  rightpart relative  h-full md:w-[40%]  ">
         <div className="child sticky top-0 left-0 flex items-center justify-center h-screen w-full ">
           <div className="imageframe md:h-[60%] md:w-full lg:h-[85%] lg:w-[80%] bg-[#D42A2A] ">
             <img

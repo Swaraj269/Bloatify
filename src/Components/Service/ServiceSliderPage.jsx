@@ -23,8 +23,8 @@ function ServiceSliderPage({ setHstart }) {
     <div className="workpage h-[320vh] w-full flex items-start justify-center bg-[#D42A2A]">
       <div className="Container relative  bg-black origin-top h-full w-full scale-[0.65] flex items-center justify-center ">
         <Cards />
-        <div className="videocontainer h-full w-full  ">
-          <div className="videodiv hidden lg:flex justify-center items-center h-screen z-[-1] w-full sticky top-0 left-0  ">
+        <div className="videocontainer hidden lg:flex  h-full w-full  ">
+          <div className="videodiv flex  justify-center items-center h-screen z-[-1] w-full sticky top-0 left-0  ">
             <video
               muted autoPlay loop
               className="h-[70%] w-[45%] rounded-md  object-cover"
