@@ -6,6 +6,7 @@ import { Play, Pause } from "lucide-react";
 
 function WorkSliderPage({ hstart, setHstart }) {
   const videos = [
+    "https://youtube.com/shorts/Mz0OdAQuyF8?si=8rnJt0QzEl0MXvsb",
     "https://youtube.com/shorts/UYNZ8zHgAKg?si=aWy4FEbidV2oDI1u",
     "https://youtube.com/shorts/HqhwY-DFV-g?si=Uo01DUlqiUABfyVS",
     "https://youtube.com/shorts/ghgQhPAoPrs?si=9K5MRj6j5c0TD8RT",
@@ -93,21 +94,28 @@ function WorkSliderPage({ hstart, setHstart }) {
     });
   };
 
+  const getThumbnail = (url) => {
+    const match = url.match(/(?:\/|v=)([a-zA-Z0-9_-]{11})/);
+    return match
+      ? `https://img.youtube.com/vi/${match[1]}/maxresdefault.jpg`
+      : "";
+  };
+
   return (
     <div className="workpage h-[90vh] md:h-[110vh] w-full flex items-start justify-center bg-[#D42A2A]">
       <div className="Container relative overflow-hidden bg-black origin-top h-full w-full scale-[0.65]">
-        <div
-          className="image-preview video-player absolute top-[40%] md:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[55%] w-[60%]  md:h-[75%] md:w-[45%] lg:w-[27%] cursor-pointer"
-          onClick={togglePlayPause}
-        >
-          <ReactPlayer url={currentVideo} width="100%" height="100%" />
-          {/* <div className="absolute inset-0 flex items-center justify-center ">
-            {playing ? (
-              <Pause className="text-white w-16 h-16" />
-            ) : (
-              <Play className="text-white w-16 h-16" />
-            )}
-          </div> */}
+        <div className="image-preview video-player absolute top-[40%] md:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[55%] w-[60%]  md:h-[75%] md:w-[45%] lg:w-[27%] cursor-pointer">
+          <a
+            className="inline-block  video-player h-full w-[100%] px-5 relative overflow-hidden select-none cursor-pointer"
+            href={currentVideo}
+            target="_blank"
+          >
+            <img
+              src={getThumbnail(currentVideo)}
+              alt="Video Thumbnail"
+              className="w-full h-[80%] object-cover"
+            />
+          </a>
         </div>
 
         <div

@@ -11,12 +11,12 @@ function Loader({ setFinish }) {
         }
         return prev + 1;
       });
-    }, 1000);
+    }, 400);
   });
   const [loadingPercent, setLoadingPercent] = useState(0);
   useGSAP(() => {
     gsap.to(".loadingbar", {
-      duration: 4,
+      duration: 1.4,
       translateX: "0%",
       ease: "expoInOut",
     });

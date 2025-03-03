@@ -35,6 +35,10 @@ function VideoSlider({ setHstart, hstart }) {
 
   const videos = [
     {
+      src: "https://youtube.com/shorts/Mz0OdAQuyF8?si=nVkDG9K_EoI97J9X",
+      title: "Video 6",
+    },
+    {
       src: "https://youtube.com/shorts/6qNC87wqYw8?si=2-9tyf5r3LfSQqne",
       title: "Video 6",
     },
@@ -119,27 +123,17 @@ function VideoSlider({ setHstart, hstart }) {
           >
             {videos.map((elem, index) => (
               <SwiperSlide key={index} className="flex justify-center">
-                <div
-                  className="video-player h-full w-[100%] relative overflow-hidden cursor-pointer"
-                  onClick={() => toggleVideo(index)}
+                <a
+                  className="inline-block video-player h-full w-[100%] md:px-16 relative overflow-hidden select-none cursor-pointer"
+                  href={elem.src}
+                  target="_blank"
                 >
-                  {playingIndex === index ? (
-                    <ReactPlayer
-                      url={elem.src}
-                      playing
-                      controls={true}
-                      width="100%"
-                      height="90%"
-                      className="transition-transform duration-500 ease-in-out transform scale-75 swiper-slide-active:scale-100"
-                    />
-                  ) : (
-                    <img
-                      src={getThumbnail(elem.src)}
-                      alt="Video Thumbnail"
-                      className="w-full h-[80%] object-cover"
-                    />
-                  )}
-                </div>
+                  <img
+                    src={getThumbnail(elem.src)}
+                    alt="Video Thumbnail"
+                    className="w-full h-[70%] object-cover"
+                  />
+                </a>
               </SwiperSlide>
             ))}
           </Swiper>
