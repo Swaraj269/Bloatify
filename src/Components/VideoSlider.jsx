@@ -49,15 +49,23 @@ function VideoSlider({ setHstart, hstart }) {
     {
       src: "https://youtube.com/shorts/HqhwY-DFV-g?si=51eL054FOzcnGzO2",
       title: "Video 6",
-    },{
+    },
+    {
       src: "https://youtube.com/shorts/UYNZ8zHgAKg?si=8-W7OP2YTls_y3hg",
       title: "Video 6",
     },
   ];
 
+  const getThumbnail = (url) => {
+    const match = url.match(/(?:\/|v=)([a-zA-Z0-9_-]{11})/);
+    return match
+      ? `https://img.youtube.com/vi/${match[1]}/maxresdefault.jpg`
+      : "";
+  };
+
   const [playingIndex, setPlayingIndex] = useState(null);
 
-  const toggleAudio = (index) => {
+  const toggleVideo = (index) => {
     setPlayingIndex(playingIndex === index ? null : index);
   };
 
@@ -113,21 +121,24 @@ function VideoSlider({ setHstart, hstart }) {
               <SwiperSlide key={index} className="flex justify-center">
                 <div
                   className="video-player h-full w-[100%] relative overflow-hidden cursor-pointer"
-                  onClick={() => toggleAudio(index)}
+                  onClick={() => toggleVideo(index)}
                 >
-                  <ReactPlayer
-                    url={elem.src}
-                    width="100%"
-                    height="90%"
-                    className="transition-transform duration-500 ease-in-out transform scale-75 swiper-slide-active:scale-100"
-                  />
-                  {/* <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-                    {playingIndex === index ? (
-                      <Pause size={60} className="text-white opacity-90" />
-                    ) : (
-                      <Play size={60} className="text-white opacity-90" />
-                    )}
-                  </div> */}
+                  {playingIndex === index ? (
+                    <ReactPlayer
+                      url={elem.src}
+                      playing
+                      controls={true}
+                      width="100%"
+                      height="90%"
+                      className="transition-transform duration-500 ease-in-out transform scale-75 swiper-slide-active:scale-100"
+                    />
+                  ) : (
+                    <img
+                      src={getThumbnail(elem.src)}
+                      alt="Video Thumbnail"
+                      className="w-full h-[80%] object-cover"
+                    />
+                  )}
                 </div>
               </SwiperSlide>
             ))}
