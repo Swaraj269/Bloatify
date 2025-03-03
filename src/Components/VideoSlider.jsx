@@ -2,12 +2,6 @@ import { useGSAP } from "@gsap/react";
 import gsap, { Expo } from "gsap";
 import React, { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/all";
-import Video1 from "../assets/Videos/Video1.mp4";
-import Video2 from "../assets/Videos/Video2.mp4";
-import Video3 from "../assets/Videos/Video3.mp4";
-import Video4 from "../assets/Videos/Video4.mp4";
-import Video5 from "../assets/Videos/Video5.mp4";
-import Video6 from "../assets/Videos/Video6.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
@@ -40,12 +34,25 @@ function VideoSlider({ setHstart, hstart }) {
   });
 
   const videos = [
-    { src: Video6, title: "Video 6" },
-    { src: Video5, title: "Video 5" },
-    { src: Video4, title: "Video 4" },
-    { src: Video3, title: "Video 3" },
-    { src: Video2, title: "Video 2" },
-    { src: Video1, title: "Intro Video" },
+    {
+      src: "https://youtube.com/shorts/6qNC87wqYw8?si=2-9tyf5r3LfSQqne",
+      title: "Video 6",
+    },
+    {
+      src: "https://youtube.com/shorts/ghgQhPAoPrs?si=9K5MRj6j5c0TD8RT",
+      title: "Video 6",
+    },
+    {
+      src: "https://youtube.com/shorts/Ps37G0CNvBk?si=z9yV9Dsxoqdc2Uop",
+      title: "Video 6",
+    },
+    {
+      src: "https://youtube.com/shorts/HqhwY-DFV-g?si=51eL054FOzcnGzO2",
+      title: "Video 6",
+    },{
+      src: "https://youtube.com/shorts/UYNZ8zHgAKg?si=8-W7OP2YTls_y3hg",
+      title: "Video 6",
+    },
   ];
 
   const [playingIndex, setPlayingIndex] = useState(null);
@@ -110,21 +117,17 @@ function VideoSlider({ setHstart, hstart }) {
                 >
                   <ReactPlayer
                     url={elem.src}
-                    controls={false}
-                    playing
-                    muted={playingIndex !== index}
-                    loop={true}
                     width="100%"
                     height="90%"
                     className="transition-transform duration-500 ease-in-out transform scale-75 swiper-slide-active:scale-100"
                   />
-                  <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+                  {/* <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
                     {playingIndex === index ? (
                       <Pause size={60} className="text-white opacity-90" />
                     ) : (
                       <Play size={60} className="text-white opacity-90" />
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </SwiperSlide>
             ))}

@@ -1,37 +1,28 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
-import Video1 from "../../assets/Videos/Video1.mp4";
-import Video2 from "../../assets/Videos/Video2.mp4";
-import Video3 from "../../assets/Videos/Video3.mp4";
-import Video4 from "../../assets/Videos/Video4.mp4";
-import Video5 from "../../assets/Videos/Video5.mp4";
-import Video6 from "../../assets/Videos/Video6.mp4";
-import Video7 from "../../assets/Videos/Video7.mp4";
-import Video8 from "../../assets/Videos/Video8.mp4";
-import Video9 from "../../assets/Videos/Video9.mp4";
-import Video10 from "../../assets/Videos/Video10.mp4";
-import Video11 from "../../assets/Videos/Video11.mp4";
-import Video12 from "../../assets/Videos/Video12.mp4";
 import ReactPlayer from "react-player";
 import { Play, Pause } from "lucide-react";
 
 function WorkSliderPage({ hstart, setHstart }) {
   const videos = [
-    Video1,
-    Video2,
-    Video3,
-    Video4,
-    Video5,
-    Video6,
-    Video7,
-    Video8,
-    Video9,
-    Video10,
-    Video11,
-    Video12,
+    "https://youtube.com/shorts/UYNZ8zHgAKg?si=aWy4FEbidV2oDI1u",
+    "https://youtube.com/shorts/HqhwY-DFV-g?si=Uo01DUlqiUABfyVS",
+    "https://youtube.com/shorts/ghgQhPAoPrs?si=9K5MRj6j5c0TD8RT",
+    "https://youtube.com/shorts/ikC-5DqzWO0?si=8swu9sPtMenI1mAy",
+    "https://youtube.com/shorts/2Dm3lxTOLcs?si=noJ7f_PiWqRBMRVS",
+    "https://youtube.com/shorts/Ps37G0CNvBk?si=5fJobsA2n0PWHCXl",
+    "https://youtube.com/shorts/7fnxOPrTn90?si=t2sPSDDc7j6ml5HB",
+    "https://youtube.com/shorts/IEooX_pzPkQ?si=Hxq0hDOQTXwmKKvp",
+    "https://youtube.com/shorts/d1J8KlwE428?si=WhfPQ5x06dzgSqJ_",
   ];
-  const [currentVideo, setCurrentVideo] = useState(Video1);
+
+  const getThumbnailUrl = (videoUrl) => {
+    const videoId = videoUrl.split("/shorts/")[1]?.split("?")[0];
+    return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`; // Medium quality thumbnail
+  };
+
+  const [currentVideo, setCurrentVideo] = useState(videos[0]);
   const [playing, setPlaying] = useState(true);
   const [muted, setMuted] = useState(false);
   const indicatorRef = useRef(null);
@@ -109,23 +100,14 @@ function WorkSliderPage({ hstart, setHstart }) {
           className="image-preview video-player absolute top-[40%] md:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[55%] w-[60%]  md:h-[75%] md:w-[45%] lg:w-[27%] cursor-pointer"
           onClick={togglePlayPause}
         >
-          <ReactPlayer
-            url={currentVideo}
-            controls={false}
-            playing={playing}
-            muted={muted}
-            loop
-            autoPlay
-            width="100%"
-            height="100%"
-          />
-          <div className="absolute inset-0 flex items-center justify-center ">
+          <ReactPlayer url={currentVideo} width="100%" height="100%" />
+          {/* <div className="absolute inset-0 flex items-center justify-center ">
             {playing ? (
               <Pause className="text-white w-16 h-16" />
             ) : (
               <Play className="text-white w-16 h-16" />
             )}
-          </div>
+          </div> */}
         </div>
 
         <div
@@ -144,15 +126,10 @@ function WorkSliderPage({ hstart, setHstart }) {
                 ref={(el) => (itemsRef.current[index] = el)}
                 className="item shrink-0 w-16 md:w-full h-12 md:h-24 px-2 md:px-1 md:py-2 cursor-pointer"
               >
-                <ReactPlayer
-                  url={elem}
-                  controls={false}
-                  playing={false}
-                  muted
-                  loop
-                  autoPlay
-                  width="100%"
-                  height="100%"
+                <img
+                  src={getThumbnailUrl(elem)}
+                  alt={`Thumbnail ${index}`}
+                  className="w-full h-full object-cover rounded-md"
                 />
               </div>
             ))}
