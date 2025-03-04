@@ -8,6 +8,7 @@ function WorkSliderPage({ hstart, setHstart }) {
   const videos = [
     "https://youtube.com/shorts/Mz0OdAQuyF8?si=8rnJt0QzEl0MXvsb",
     "https://youtube.com/shorts/UYNZ8zHgAKg?si=aWy4FEbidV2oDI1u",
+    "https://youtube.com/shorts/VblPKIT1FGk?si=tcCPKMU-rDmYV-3h",
     "https://youtube.com/shorts/HqhwY-DFV-g?si=Uo01DUlqiUABfyVS",
     "https://youtube.com/shorts/ghgQhPAoPrs?si=9K5MRj6j5c0TD8RT",
     "https://youtube.com/shorts/ikC-5DqzWO0?si=8swu9sPtMenI1mAy",
@@ -102,7 +103,7 @@ function WorkSliderPage({ hstart, setHstart }) {
   };
 
   return (
-    <div className="workpage h-[90vh] md:h-[110vh] w-full flex items-start justify-center bg-[#D42A2A]">
+    <div className="workpage worksliding h-[90vh] md:h-[110vh] w-full flex items-start justify-center bg-[#D42A2A]">
       <div className="Container relative overflow-hidden bg-black origin-top h-full w-full scale-[0.65]">
         <div className="image-preview video-player absolute top-[40%] md:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[55%] w-[60%]  md:h-[75%] md:w-[45%] lg:w-[27%] cursor-pointer">
           <a

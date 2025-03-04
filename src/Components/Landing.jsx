@@ -33,9 +33,9 @@ function Landing({ finish }) {
   }, [finish]);
 
   return (
-    <div className=" h-[64vh] md:h-[74vh] lg:h-[85vh] pt-[12vh] lg:pt-28 px-[4.6vw] text-black w-full bg-[#D42A2A]">
+    <div className=" landing1 h-[64vh] md:h-[75vh] lg:h-[85vh] pt-[12vh] lg:pt-28 px-[4.6vw] text-black w-full bg-[#D42A2A]">
       <div className="heading">
-        <h1 className=" text-[12vw]  md:text-[8.5vw] lg:text-[8.7vw] overflow-hidden leading-[1.2]  lg:leading-[1.1] pb-3  ">
+        <h1 className=" text-[12vw] md:text-[8.5vw] lg:text-[8.7vw] overflow-hidden leading-[1.2]  lg:leading-[1.1] pb-3  ">
           <span className="inline-block font-[Sbold]">
             Bringing Your Brand's
           </span>

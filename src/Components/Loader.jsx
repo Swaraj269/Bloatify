@@ -11,7 +11,7 @@ function Loader({ setFinish }) {
         }
         return prev + 1;
       });
-    }, 400);
+    }, 300);
   });
   const [loadingPercent, setLoadingPercent] = useState(0);
   useGSAP(() => {

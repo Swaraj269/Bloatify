@@ -39,7 +39,7 @@ function Cards() {
   ];
 
   return (
-    <div className="cards relative w-full h-full text-black flex flex-col gap-12 items-center py-[15vh]">
+    <div className="servicecards relative w-full h-full text-black flex flex-col gap-12 items-center md:pb-[15vh] pt-[15vh]">
       {card.map((elem, index) => {
         return (
           <div

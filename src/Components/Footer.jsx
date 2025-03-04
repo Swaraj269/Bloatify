@@ -26,7 +26,7 @@ function Footer({ setHstart, hstart }) {
   return (
     <div className="footerdiv  h-[120vh] md:h-[150vh] lg:h-[170vh] px-[3vw] lg:px-[5vw] w-full bg-[#D42A2A]">
       <div className="calldiv flex items-center h-[30%]  lg:h-[45%] w-full">
-        <div className="callcontentdiv">
+        <div className="callcontentdiv ">
           <div className="heading ">
             <h1 className=" text-[10vw] sm:text-[8vw] md:text-[7vw]  lg:text-[8vw] overflow-hidden leading-[1.3] lg:leading-[1.3] font-[Sbold] ">
               <motion.span

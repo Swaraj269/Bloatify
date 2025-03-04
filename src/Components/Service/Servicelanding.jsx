@@ -2,7 +2,7 @@ import React from "react";
 
 function Servicelanding() {
   return (
-    <div className="lg:h-[80vh] md:h-[60vh] h-[45vh] pt-28 px-[4.6vw] text-black w-full bg-[#D42A2A]">
+    <div className="servicelanding lg:h-[80vh] md:h-[60vh] h-[45vh] pt-28 px-[4.6vw] text-black w-full bg-[#D42A2A]">
       <div className="heading">
         <h1 className="text-[12.2vw] overflow-hidden  leading-[1.1] pb-3  ">
           <span className="inline-block font-[Sbold]">OUR SERVICES</span>

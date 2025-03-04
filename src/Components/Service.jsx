@@ -4,7 +4,7 @@ import React from "react";
 import ServiceImage from "../assets/Images/ServiceImage.png";
 function Service() {
   return (
-    <div className=" h-[140vh] lg:h-[200vh]  flex px-[3vw] lg:px-[5vw] w-full text-white bg-[#010101]">
+    <div className="landingservice h-[140vh] lg:h-[200vh]  flex px-[3vw] lg:px-[5vw] w-full text-white bg-[#010101]">
       <div className="leftpart pt-5 h-full w-full md:w-[60%] ">
         <div className="pagename ">
           <h1 className=" text-[10vw] md:text-[5vw] lg:text-6xl overflow-hidden leading-[1.2] lg:leading-[1] font-[Smedium] ">
