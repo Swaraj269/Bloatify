@@ -124,10 +124,17 @@ function VideoSlider({ setHstart, hstart }) {
             {videos.map((elem, index) => (
               <SwiperSlide key={index} className="flex justify-center">
                 <a
-                  className="inline-block video-player h-full w-[100%] md:px-16 relative overflow-hidden select-none cursor-pointer"
+                  className="inline-block relative video-player h-full w-[100%] md:px-16 relative overflow-hidden select-none cursor-pointer"
                   href={elem.src}
                   target="_blank"
                 >
+                  <div className="overlaydiv pointer-events-none absolute top-0 left-0 h-[70%] w-full flex items-center justify-center ">
+                    <div className="circle h-[15vw] w-[15vw] sm:h-[12vw] sm:w-[12vw] md:h-[10vw] md:w-[10vw]  lg:h-[5vw] rounded-full bg-[#D42A2A] flex items-center justify-center lg:w-[5vw] ">
+                      <h1 className="text-black text-[2.5vw] sm:text-[2vw] md:text-[1.6vw] lg:text-[0.9vw] font-[Smedium] ">
+                        Click Me
+                      </h1>
+                    </div>
+                  </div>
                   <img
                     src={getThumbnail(elem.src)}
                     alt="Video Thumbnail"
